@@ -17,8 +17,8 @@ public class Base {
 		options.addArguments("start-maximized");
 		driver = new ChromeDriver(options);	// Open google chrome
 		
-		// implicit wait = 5 secs
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		// implicit wait = 8 secs
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
 		
 		driver.get("https://www.amazon.in/");			// Open a website
 	}
