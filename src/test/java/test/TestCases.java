@@ -45,7 +45,7 @@ public class TestCases extends Base{
 		String languageSelected = language.getText();
 		
 		Assert.assertEquals(languageSelected, "English");
-		Assert.assertTrue(!countryNameInFooter.isDisplayed());
+		Assert.assertTrue(countryNameInFooter.isDisplayed());
 		
 	}
 	
