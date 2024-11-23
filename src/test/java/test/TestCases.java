@@ -16,9 +16,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import base.Base;
 import pom.HomePage;
-import utilities.CommonActions;
+import utilities.Commands;
 
 public class TestCases extends Base{
 	
@@ -27,6 +29,7 @@ public class TestCases extends Base{
 	@BeforeMethod
 	public void setUp()
 	{
+		System.out.println("=========xxxxxxxxxx=============== "+System.getProperty("myValuepass"));
 		base = new Base();
 		base.initializeBrowserAndLaunchWebsite();
 	}
@@ -34,8 +37,8 @@ public class TestCases extends Base{
 	@Test(priority=1)
 	public void amazonVerifyEnglishLanguageSelected() throws InterruptedException
 	{
-		CommonActions.waitForElementToBeClickable(driver, HomePage.getSearchInput(), 30);
-		CommonActions.jsExecuteScroll(driver, HomePage.getLanguageSelectionFooter());
+		Commands.waitForElementToBeClickable(driver, HomePage.getSearchInput(), 30);
+		Commands.jsExecuteScroll(driver, HomePage.getLanguageSelectionFooter());
 		
 		Thread.sleep(5000);
 		
@@ -43,7 +46,9 @@ public class TestCases extends Base{
 		WebElement countryNameInFooter = driver.findElement(By.xpath(HomePage.getCountryNameInFooter()));
 		
 		String languageSelected = language.getText();
-		
+		// Hard Assert
+		// Soft Assert
+	
 		Assert.assertEquals(languageSelected, "English");
 		Assert.assertTrue(countryNameInFooter.isDisplayed());
 		

@@ -7,6 +7,7 @@ public class HomePage {
 	private static String language = "//a[@id='icp-touch-link-language']//span";
 	private static String countryNameInFooter = "//div[contains(@class,'navFooterLinkLine')]//a[text()='United States']";    
 	
+	// Page factory model - @FindBy @FindAll @FindAny
 	public static String getSearchInput()
 	{
 		return searchInput;
