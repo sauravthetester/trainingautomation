@@ -54,6 +54,7 @@ public class Base {
 		driver = new ChromeDriver(chromeOptions);	// Open google chrome
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		
 		driver.get(Links.urlToNavigate);			// Open a website
 	}

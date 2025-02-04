@@ -5,7 +5,7 @@ public class HomePage {
 	private static String searchInput = "//input[@id='twotabsearchtextbox']";
 	private static String languageSelectionFooter = "//a[@id='icp-touch-link-language']";
 	private static String language = "//a[@id='icp-touch-link-language']//span";
-	private static String countryNameInFooter = "//div[contains(@class,'navFooterLinkLine')]//a[text()='United States']";    
+	private static String amazonLogoInFooter = "//div[contains(@class,'navFooterLinkLine')]//a[@aria-label='Amazon India Home']";    
 	
 	// Page factory model - @FindBy @FindAll @FindAny
 	public static String getSearchInput()
@@ -22,9 +22,9 @@ public class HomePage {
 	{
 		return language;
 	}
-	public static String getCountryNameInFooter()
+	public static String getzamazonLogoInFooter()
 	{
-		return countryNameInFooter;
+		return amazonLogoInFooter;
 	}
 
 }

@@ -43,7 +43,7 @@ public class TestCases extends Base{
 		Thread.sleep(5000);
 		
 		WebElement language = driver.findElement(By.xpath(HomePage.getLanguage()));
-		WebElement countryNameInFooter = driver.findElement(By.xpath(HomePage.getCountryNameInFooter()));
+		WebElement countryNameInFooter = driver.findElement(By.xpath(HomePage.getzamazonLogoInFooter()));
 		
 		String languageSelected = language.getText();
 		// Hard Assert
