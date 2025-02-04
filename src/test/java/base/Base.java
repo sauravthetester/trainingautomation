@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Links;
@@ -29,7 +30,7 @@ public class Base {
 //        .clearResolutionCache()
 //        .create();
 		
-		driver = new ChromeDriver();	// Open google chrome
+		driver = new FirefoxDriver();	// Open google chrome
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
 		
