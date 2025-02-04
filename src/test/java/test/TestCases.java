@@ -37,7 +37,7 @@ public class TestCases extends Base{
 	@Test(priority=1)
 	public void amazonVerifyEnglishLanguageSelected() throws InterruptedException
 	{
-		Commands.waitForElementToBeClickable(driver, HomePage.getSearchInput(), 90);
+//		Commands.waitForElementToBeClickable(driver, HomePage.getSearchInput(), 90);
 		Commands.jsExecuteScroll(driver, HomePage.getLanguageSelectionFooter());
 		
 		Thread.sleep(5000);
