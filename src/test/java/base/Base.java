@@ -19,7 +19,14 @@ public class Base {
 		//ChromeOptions options = new ChromeOptions();
 		//options.addArguments("start-maximized");
 		//options.addArguments("incognito");
-		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.chromedriver().setup();
+		WebDriverManager
+        .chromedriver()
+        .capabilities(new ChromeOptions().addArguments("--headless=new"))
+        .clearDriverCache()
+        .clearResolutionCache()
+        .create();
+		
 		driver = new ChromeDriver();	// Open google chrome
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
