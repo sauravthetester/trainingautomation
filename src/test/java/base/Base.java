@@ -16,11 +16,11 @@ public class Base {
 	public void initializeBrowserAndLaunchWebsite()
 	{
 		// Chrome browser launch
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("start-maximized");
-		options.addArguments("incognito");
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("start-maximized");
+		//options.addArguments("incognito");
 		
-		driver = new ChromeDriver(options);	// Open google chrome
+		driver = new ChromeDriver();	// Open google chrome
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
 		
