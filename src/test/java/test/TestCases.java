@@ -52,6 +52,8 @@ public class TestCases extends Base{
 		Assert.assertEquals(languageSelected, "English");
 		Assert.assertTrue(countryNameInFooter.isDisplayed());
 		
+		System.out.println("************ Test case passed - VERIFIED **************");
+		
 	}
 	
 	
