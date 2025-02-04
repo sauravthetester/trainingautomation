@@ -21,12 +21,13 @@ public class Base {
 		//options.addArguments("incognito");
 //		options.addArguments("--headless=new");
 //		WebDriverManager.chromedriver().setup();
-		WebDriverManager
-        .chromedriver()
-        .capabilities(new ChromeOptions().addArguments("--headless=new"))
-        .clearDriverCache()
-        .clearResolutionCache()
-        .create();
+		
+//		WebDriverManager
+//        .chromedriver()
+//        .capabilities(new ChromeOptions().addArguments("--headless=new"))
+//        .clearDriverCache()
+//        .clearResolutionCache()
+//        .create();
 		
 		driver = new ChromeDriver();	// Open google chrome
 		
