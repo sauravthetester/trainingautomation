@@ -16,9 +16,10 @@ public class Base {
 	public void initializeBrowserAndLaunchWebsite()
 	{
 		// Chrome browser launch
-		//ChromeOptions options = new ChromeOptions();
-		//options.addArguments("start-maximized");
+		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("start-maximized");
 		//options.addArguments("incognito");
+//		options.addArguments("--headless=new");
 //		WebDriverManager.chromedriver().setup();
 		WebDriverManager
         .chromedriver()
