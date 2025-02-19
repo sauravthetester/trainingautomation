@@ -9,23 +9,27 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+
+
+steps:
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(de4d8adc-e25c-4362-a0a3-725783e9e151)'
+    mavenPomFile: 'pom.xml'
+    goals: 'clean install'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+
 schedules:
   - cron: '0 0 * * *'
     displayName: Daily morning build
     always: false
-    batch: true
+    batch: false
     branches:
       include:
         - master
-
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
