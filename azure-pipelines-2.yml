@@ -9,8 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-
-
 steps:
 - task: Maven@4
   inputs:
@@ -26,7 +24,7 @@ steps:
     sonarQubeRunAnalysis: false
 
 schedules:
-  - cron: '0 0 * * *'
+  - cron: '0 21 * * 5'
     displayName: Daily morning build
     always: false
     batch: false
